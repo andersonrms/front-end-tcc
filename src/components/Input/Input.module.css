@@ -1,0 +1,27 @@
+.inputArea + .inputArea {
+    margin-top: 8px;
+}
+
+.Input {
+    background: transparent;
+    padding: 14px 16px;
+    margin: 0;
+    border: 1px solid #dddfe2;
+    border-radius: 4px;
+    font-size: 17px;
+    font-family: Roboto, sans-serif; 
+    flex-grow: 2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    outline: none;
+}
+
+.isFocused {
+    border: 1px solid aqua;
+}
+
+.hasError {
+    border: 1px solid red;
+}
