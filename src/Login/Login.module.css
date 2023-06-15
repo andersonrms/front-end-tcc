@@ -1,8 +1,10 @@
 .Container {
-    width: 100%;
-    margin-top: 40px;
+    max-width: 980px;
+    margin: 0 auto;
+    margin-top: 140px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .box {
@@ -11,6 +13,30 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
     box-sizing: border-box;
-    padding: 20px  28px;
+    padding: 20px;
     width: 396px;
 }
+
+.SignInButton, .PasswordForget {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.RegisterUser {
+    background-color: #42b72a;
+    border: 1px solid #42b72a;
+    margin: 0 auto;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.RegisterUser:focus-visible, .RegisterUser:hover {
+    background-color: #2e801d;
+    border-color: #2e801d;
+}
+
+.Divider {
+    border-bottom: 1px solid #dadde1;
+    margin: 20px 16px;
+}
+
