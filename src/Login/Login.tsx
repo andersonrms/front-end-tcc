@@ -29,10 +29,8 @@ const Login = () => {
         },
         method: 'POST',
         body: JSON.stringify(data),
-    })
-
-    const cookie = response.headers.get('Set-Cookie');
-    console.log(cookie)
+        credentials: "include"
+    })    
   };
 
   return (
