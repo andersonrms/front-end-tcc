@@ -1,13 +1,20 @@
 .Container {
     max-width: 980px;
     margin: 0 auto;
+    padding: 20px;
     margin-top: 140px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.box {
+.Container aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.LoginBox {
     background-color: #fff;
     border: none;
     border-radius: 8px;
@@ -40,3 +47,12 @@
     margin: 20px 16px;
 }
 
+@media (max-width: 900px) {
+    .Container{
+        flex-direction: column;
+    }
+
+    .AsideTitle {
+        margin-bottom: 20px;
+    }
+}
