@@ -66,3 +66,15 @@
     border: none;
     font-size: 14px;
 }
+
+.positive {
+    background-color: #42b72a;
+    border: 1px solid #42b72a;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.positive:focus-visible, .positive:hover {
+    background-color: #2e801d;
+    border-color: #2e801d;
+}

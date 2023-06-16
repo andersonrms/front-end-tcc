@@ -12,6 +12,8 @@ import { ALLOWED_TAGS, Text } from "../components/Text";
 import styles from "./Login.module.css";
 import { validateLoginFormType, validateLoginFormSchema } from "./schema";
 import { LOGIN_URL } from "../helpers";
+import Register from "./childs/Register";
+import Divider from "../components/Divider";
 
 const Login = () => {
   const {
@@ -35,6 +37,7 @@ const Login = () => {
 
   return (
     <div className={styles.Container}>
+      <Register />
       <aside>
         <Image
           alt="Logo"
@@ -87,12 +90,12 @@ const Login = () => {
           Esqueceu sua senha?
         </Button>
 
-        <div role="separator" className={styles.Divider} />
+        <Divider />
 
         <footer>
           <Button
             className={styles.RegisterUser}
-            modifier={BUTTON_MODIFIERS.SUPPORT}
+            modifier={BUTTON_MODIFIERS.POSITIVE}
             type="submit"
           >
             Criar nova conta

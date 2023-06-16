@@ -30,21 +30,7 @@
 }
 
 .RegisterUser {
-    background-color: #42b72a;
-    border: 1px solid #42b72a;
     margin: 0 auto;
-    color: #FFFFFF;
-    font-weight: 700;
-}
-
-.RegisterUser:focus-visible, .RegisterUser:hover {
-    background-color: #2e801d;
-    border-color: #2e801d;
-}
-
-.Divider {
-    border-bottom: 1px solid #dadde1;
-    margin: 20px 16px;
 }
 
 @media (max-width: 900px) {

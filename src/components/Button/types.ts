@@ -3,7 +3,7 @@ import { PolymorphicProps } from "../types";
 export const BUTTON_MODIFIERS = {
     PRIMARY: 'primary',
     SECONDARY: 'secondary',
-    SUPPORT: 'support',
+    POSITIVE: 'positive',
     TERTIARY: 'tertiary',
   } as const;
 
