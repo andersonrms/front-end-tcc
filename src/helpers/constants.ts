@@ -1,0 +1,50 @@
+const API_BASE_URL = 'http://localhost:3001'
+
+const LOGIN_URL = `${API_BASE_URL}/login`
+const USER_URL = `${API_BASE_URL}/user`
+
+const ERROR_CPF_REQUIRED = 'CPF é obrigatório.';
+const ERROR_CPF_INVALID = 'CPF inválido.';
+const ERROR_CPF_INCOMPLETE = 'CPF incompleto.';
+const ERROR_NAME_REQUIRED = 'Nome obrigatório';
+const ERROR_NAME_INCOMPLETE = 'Nome incompleto';
+const ERROR_PHONE_INCOMPLETE = 'Número incompleto';
+const ERROR_PHONE_REQUIRED = 'Número obrigatório'
+const ERROR_EMAIL_REQUIRED = 'E-mail obrigatório';
+const ERROR_EMAIL_INVALID = 'E-mail inválido';
+const ERROR_PASSWORD_REQUIRED = 'Digite uma senha';
+const ERROR_ADDRESS_REQUIRED = 'Endereço obrigatório';
+const ERROR_ADDRESS_INCOMPLETE = 'Endereço incompleto';
+
+const MIN_LENGTH_PASSWORD = 8;
+const MIN_LENGTH_NAME = 6;
+const MIN_LENGTH_ADDRESS = 5;
+const CPF_INPUT_LENGTH = 14
+const PHONE_LENGTH = 11;
+const INPUT_PHONE_LENGTH = 15;
+
+
+
+export {
+    API_BASE_URL,
+    LOGIN_URL,
+    USER_URL,
+    ERROR_CPF_REQUIRED,
+    ERROR_CPF_INVALID,
+    ERROR_CPF_INCOMPLETE,
+    ERROR_NAME_REQUIRED,
+    ERROR_NAME_INCOMPLETE,
+    ERROR_PHONE_INCOMPLETE,
+    ERROR_EMAIL_REQUIRED,
+    ERROR_EMAIL_INVALID,
+    ERROR_PASSWORD_REQUIRED,
+    ERROR_ADDRESS_REQUIRED,
+    ERROR_ADDRESS_INCOMPLETE,
+    ERROR_PHONE_REQUIRED,
+    MIN_LENGTH_PASSWORD,
+    MIN_LENGTH_NAME,
+    MIN_LENGTH_ADDRESS,
+    PHONE_LENGTH,
+    CPF_INPUT_LENGTH,
+    INPUT_PHONE_LENGTH
+}

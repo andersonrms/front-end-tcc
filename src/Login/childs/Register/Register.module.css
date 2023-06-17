@@ -1,0 +1,25 @@
+.RegisterModalHeader div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.RegisterModalHeader span {
+    color: #606770;
+    font-size: 15px;
+}
+
+.RegisterModalFooter p {
+    color: #606770;
+    font-size: 12px;
+    margin: 12px 0;
+}
+
+.RegisterModalFooter p span {
+    color: #355898
+}
+
+.RegisterButton {
+    margin: 0 auto;
+    padding: 6px 32px;
+}

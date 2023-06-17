@@ -1,16 +1,44 @@
 .Container {
-    width: 100%;
-    margin-top: 40px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 140px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.box {
+.Container aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.LoginBox {
     background-color: #fff;
     border: none;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
     box-sizing: border-box;
-    padding: 20px  28px;
+    padding: 20px;
     width: 396px;
+}
+
+.SignInButton, .PasswordForget {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.RegisterUser {
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .Container{
+        flex-direction: column;
+    }
+
+    .AsideTitle {
+        margin-bottom: 20px;
+    }
 }

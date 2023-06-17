@@ -1,5 +1,5 @@
 .inputArea + .inputArea {
-    margin-top: 8px;
+    margin-top: 16px;
 }
 
 .Input {
@@ -16,12 +16,19 @@
     text-overflow: ellipsis;
     width: 100%;
     outline: none;
+    color: #333333;
 }
 
 .isFocused {
-    border: 1px solid aqua;
+    border: 1px solid #1877f2;
 }
 
 .hasError {
     border: 1px solid red;
+}
+
+.InputErrorMessage {
+    margin-top: 6px;
+    display: block;
+    color: red;
 }

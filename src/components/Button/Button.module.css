@@ -1,0 +1,80 @@
+.Button {
+    display: flex;
+    justify-content: center;
+
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 20px;
+    font-family: Roboto, sans-serif; 
+
+    transition: background 0.25s ease-in, color 0.25s ease-in,
+    padding 0.25s ease-in, height 0.25s ease-in;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.Button:focus-visible, .Button:hover {
+    transition: background 0.25s ease-out, color 0.25s ease-out;
+    text-decoration: none;
+}
+
+.Button.Disabled,
+.Button:disabled {
+    cursor: default;
+    pointer-events: none;
+}
+
+.Label {
+    margin: 0;
+    padding: 0;
+
+    transition: opacity 0.25s ease-in;
+}
+
+.primary {
+    background: #1877f2;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    font-weight: 700;
+}
+
+.primary:hover, .primary:focus-visible {
+    background: #1153a9;
+}
+
+.secondary {
+    background: #f7f7f7;
+    color: #1877f2;
+    border: 1px solid #1877f2;
+    font-weight: 700;
+}
+
+.secondary:focus-visible, .secondary:hover {
+    background: #1877f2;
+    color: #f7f7f7;
+    border: 1px solid #f7f7f7;
+}
+
+.tertiary {
+    background: transparent;
+    color: #1877f2;
+    border: none;
+    font-size: 14px;
+}
+
+.positive {
+    background-color: #42b72a;
+    border: 1px solid #42b72a;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.positive:focus-visible, .positive:hover {
+    background-color: #2e801d;
+    border-color: #2e801d;
+}
