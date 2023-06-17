@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import React from "react";
-import Image from "next/image";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+import React from 'react';
+import Image from 'next/image';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 
-import { Button, BUTTON_MODIFIERS } from "../components/Button";
-import { Input } from "../components/Input";
-import { ALLOWED_TAGS, Text } from "../components/Text";
+import { Button, BUTTON_MODIFIERS } from '../components/Button';
+import { Input } from '../components/Input';
+import { ALLOWED_TAGS, Text } from '../components/Text';
 
-import styles from "./Login.module.css";
-import { validateLoginFormType, validateLoginFormSchema } from "./schema";
-import { LOGIN_URL } from "../helpers";
-import Register from "./childs/Register";
-import Divider from "../components/Divider";
+import styles from './Login.module.css';
+import { validateLoginFormType, validateLoginFormSchema } from './schema';
+import { LOGIN_URL } from '../helpers';
+import Register from './childs/Register';
+import Divider from '../components/Divider';
 
 const Login = () => {
   const {
@@ -26,13 +26,15 @@ const Login = () => {
 
   const handleLoginUser = async (data: validateLoginFormType) => {
     const response = await fetch(LOGIN_URL, {
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        method: 'POST',
-        body: JSON.stringify(data),
-        credentials: "include"
-    })    
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+      body: JSON.stringify(data),
+      credentials: 'include',
+    });
+
+    console.log(response);
   };
 
   return (
@@ -61,7 +63,7 @@ const Login = () => {
             type="email"
             hasError={errors && !!errors.email?.message}
             errorMessage={errors.email?.message as string}
-            {...register("email")}
+            {...register('email')}
           />
           <Input
             id="password-input"
@@ -69,7 +71,7 @@ const Login = () => {
             type="password"
             hasError={errors && !!errors.password?.message}
             errorMessage={errors.password?.message as string}
-            {...register("password")}
+            {...register('password')}
           />
 
           <Button

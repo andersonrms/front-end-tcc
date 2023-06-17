@@ -18,15 +18,15 @@ export function assignRef<T = any>(ref: ReactRef<T> | undefined, value: T) {
 }
 
 export function useMergeRefs<T>(...refs: (ReactRef<T> | undefined)[]) {
-    return useMemo(() => {
-      if (refs.every(ref => ref == null)) {
-        return null;
-      }
-  
-      return (node: T) => {
-        refs.forEach(ref => {
-          if (ref) assignRef(ref, node);
-        });
-      };
-    }, refs);
-  }
+  return useMemo(() => {
+    if (refs.every((ref) => ref == null)) {
+      return null;
+    }
+
+    return (node: T) => {
+      refs.forEach((ref) => {
+        if (ref) assignRef(ref, node);
+      });
+    };
+  }, refs);
+}
