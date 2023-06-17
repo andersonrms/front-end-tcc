@@ -1,8 +1,8 @@
 export const isCPFValid = (cpf: string): boolean => {
-  const onlyDigits: string = cpf.replace(/\s|\W|\D/g, "");
+  const onlyDigits: string = cpf.replace(/\s|\W|\D/g, '');
   if (
     onlyDigits
-      .split("")
+      .split('')
       .reduce((acc: boolean, d: string, i: number, arr: string[]) => {
         if (!acc) return acc;
         if (i === 0) return acc;
@@ -12,7 +12,7 @@ export const isCPFValid = (cpf: string): boolean => {
     return false;
 
   const sumDigits = onlyDigits
-    .split("")
+    .split('')
     .slice(0, 9)
     .map((n: string) => parseInt(n, 10))
     .reduce((acc: number, num: number, i: number) => acc + num * (10 - i), 0);
@@ -22,7 +22,7 @@ export const isCPFValid = (cpf: string): boolean => {
 
   if (ident1 !== parseInt(onlyDigits.charAt(9), 10)) return false;
   const sumDigits2 = onlyDigits
-    .split("")
+    .split('')
     .slice(0, 10)
     .map((n: string) => parseInt(n, 10))
     .reduce((acc: number, num: number, i: number) => acc + num * (11 - i), 0);
@@ -35,14 +35,14 @@ export const isCPFValid = (cpf: string): boolean => {
 
 export const cpfMask = (value: string): string =>
   value
-    .replace(/\D/g, "")
-    .replace(/(\d{3})(\d)/, "$1.$2")
-    .replace(/(\d{3})(\d)/, "$1.$2")
-    .replace(/(\d{3})(\d{1,2})/, "$1-$2")
-    .replace(/(-\d{2})\d+?$/, "$1");
+    .replace(/\D/g, '')
+    .replace(/(\d{3})(\d)/, '$1.$2')
+    .replace(/(\d{3})(\d)/, '$1.$2')
+    .replace(/(\d{3})(\d{1,2})/, '$1-$2')
+    .replace(/(-\d{2})\d+?$/, '$1');
 
 export const phoneMask = (value: string): string =>
   value
-    .replace(/\D/g, "")
-    .replace(/(\d{2})(\d)/, "($1) $2")
-    .replace(/(\d{5})(\d{4})/, "$1-$2");
+    .replace(/\D/g, '')
+    .replace(/(\d{2})(\d)/, '($1) $2')
+    .replace(/(\d{5})(\d{4})/, '$1-$2');

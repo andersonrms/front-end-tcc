@@ -1,3 +1,3 @@
 export * from './constants';
-export * from './useMergeRefs'
-export * from './validationsAndMasks'
+export * from './useMergeRefs';
+export * from './validationsAndMasks';

@@ -1,13 +1,14 @@
-"use client";
+/* eslint-disable react/display-name */
+'use client';
 
-import React, { useState, useCallback, useRef } from "react";
-import classnames from "classnames";
+import React, { useState, useCallback, useRef } from 'react';
+import classnames from 'classnames';
 
-import { ALLOWED_TAGS, Text } from "../Text";
+import { ALLOWED_TAGS, Text } from '../Text';
 
-import styles from "./Input.module.css";
-import { InputProps } from "./types";
-import { useMergeRefs } from "../../helpers/useMergeRefs";
+import styles from './Input.module.css';
+import { InputProps } from './types';
+import { useMergeRefs } from '../../helpers/useMergeRefs';
 
 const Input = React.forwardRef(
   (
@@ -49,7 +50,8 @@ const Input = React.forwardRef(
     const inputWrapperClass = classnames(
       styles.Input,
       isFocused && styles.isFocused,
-      hasError && styles.hasError
+      hasError && styles.hasError,
+      className && className
     );
 
     return (

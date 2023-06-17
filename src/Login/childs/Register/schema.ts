@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from 'zod';
 import {
   CPF_INPUT_LENGTH,
   ERROR_ADDRESS_INCOMPLETE,
@@ -16,7 +16,7 @@ import {
   MIN_LENGTH_ADDRESS,
   MIN_LENGTH_NAME,
   PHONE_LENGTH,
-} from "@/src/helpers";
+} from '@/src/helpers';
 
 export const validateRegisterFormSchema = z.object({
   name: z
@@ -26,22 +26,22 @@ export const validateRegisterFormSchema = z.object({
     .transform((name) =>
       name
         .trim()
-        .split(" ")
+        .split(' ')
         .map((word) => word[0].toLocaleUpperCase().concat(word.substring(1)))
-        .join(" ")
+        .join(' ')
     ),
   email: z.string().nonempty(ERROR_EMAIL_REQUIRED).email(ERROR_EMAIL_INVALID),
   cpf: z
     .string()
     .nonempty(ERROR_CPF_REQUIRED)
     .min(CPF_INPUT_LENGTH, ERROR_CPF_INCOMPLETE)
-    .transform((cpf) => cpf?.replace(/\D/g, ""))
+    .transform((cpf) => cpf?.replace(/\D/g, ''))
     .refine((cpf) => cpf && cpf.length && isCPFValid(cpf), ERROR_CPF_INVALID),
   phone: z
     .string()
     .nonempty(ERROR_PHONE_REQUIRED)
     .min(INPUT_PHONE_LENGTH, ERROR_PHONE_INCOMPLETE)
-    .transform((phone) => phone?.replace(/\D/g, ""))
+    .transform((phone) => phone?.replace(/\D/g, ''))
     .refine(
       (phone) => phone && phone.length && phone.length === PHONE_LENGTH,
       ERROR_PHONE_INCOMPLETE
@@ -49,7 +49,9 @@ export const validateRegisterFormSchema = z.object({
   address: z
     .string()
     .min(MIN_LENGTH_ADDRESS, ERROR_ADDRESS_INCOMPLETE)
-    .or(z.literal(""))
+    .or(z.literal('')),
 });
 
-export type validateRegisterFormType = z.infer<typeof validateRegisterFormSchema>
+export type validateRegisterFormType = z.infer<
+  typeof validateRegisterFormSchema
+>;
