@@ -18,7 +18,7 @@ import {
   PHONE_LENGTH,
 } from '@/src/helpers';
 
-export const validateRegisterFormSchema = z.object({
+export const validateCreateCostumersFormSchema = z.object({
   name: z
     .string()
     .nonempty(ERROR_NAME_REQUIRED)
@@ -52,6 +52,6 @@ export const validateRegisterFormSchema = z.object({
     .or(z.literal('')),
 });
 
-export type validateRegisterFormType = z.infer<
-  typeof validateRegisterFormSchema
+export type validateCreateCostumersFormType = z.infer<
+  typeof validateCreateCostumersFormSchema
 >;

@@ -12,7 +12,6 @@ import { ALLOWED_TAGS, Text } from '../components/Text';
 import styles from './Login.module.css';
 import { validateLoginFormType, validateLoginFormSchema } from './schema';
 import { LOGIN_URL } from '../helpers';
-import Register from './childs/Register';
 import Divider from '../components/Divider';
 
 const Login = () => {
@@ -34,12 +33,15 @@ const Login = () => {
       credentials: 'include',
     });
 
-    console.log(response);
+    if (response.ok) {
+      const result = await response.json();
+
+      console.log(result);
+    }
   };
 
   return (
     <div className={styles.Container}>
-      <Register />
       <aside>
         <Image
           alt="Logo"

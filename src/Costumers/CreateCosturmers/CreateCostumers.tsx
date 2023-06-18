@@ -7,21 +7,24 @@ import Divider from '@/src/components/Divider';
 import { Input } from '@/src/components/Input';
 import { Button } from '@/src/components/Button';
 
-import styles from './Register.module.css';
+import styles from './CreateCostumers.module.css';
 import { useForm } from 'react-hook-form';
-import { validateRegisterFormType, validateRegisterFormSchema } from './schema';
+import {
+  validateCreateCostumersFormType,
+  validateCreateCostumersFormSchema,
+} from './schema';
 import { zodResolver } from '@hookform/resolvers/zod';
 
-const Register = () => {
+const CreateCostumers = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<validateRegisterFormType>({
-    resolver: zodResolver(validateRegisterFormSchema),
+  } = useForm<validateCreateCostumersFormType>({
+    resolver: zodResolver(validateCreateCostumersFormSchema),
   });
 
-  const handleRegisterUser = (data: validateRegisterFormType) => {
+  const handleRegisterUser = (data: validateCreateCostumersFormType) => {
     console.log(data);
   };
 
@@ -100,13 +103,4 @@ const Register = () => {
   );
 };
 
-export default Register;
-
-/* 
-    "name": "Anderson ",
-	"email": "andersonrms15@gmail.com",
-	"cpf": "15686771708",
-	"address": "Rua Alquindar, n 769",
-	"phone": "964843927"
-
-*/
+export default CreateCostumers;
