@@ -13,8 +13,16 @@ import styles from './Login.module.css';
 import { validateLoginFormType, validateLoginFormSchema } from './schema';
 import { LOGIN_URL } from '../helpers';
 import Divider from '../components/Divider';
+import { setToken } from '../lib/redux/modules/auth';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../lib/redux/store';
+import { ResponseApi } from './types';
+import { useRouter } from 'next/navigation';
 
 const Login = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
@@ -34,9 +42,9 @@ const Login = () => {
     });
 
     if (response.ok) {
-      const result = await response.json();
-
-      console.log(result);
+      const result: ResponseApi = await response.json();
+      dispatch(setToken(result.token));
+      router.push('/dashboard');
     }
   };
 
